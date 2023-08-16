@@ -7,7 +7,6 @@ always been interested in kernels and low-level programming, so in that sense,
 this project is simply to satiate my desire to learn more about that aspect of
 software development.
 
-Currently, the `src` folder contains a binary file that I created in a hex
-editor, so technically it's source code. The `Makefile` just copies that file
-into the build directory and renames it. When you boot it, the bootloader will
-just hang.
+There isn't much code, but it's a start. Just some hand-written assembly that
+prints some greetings to the screen and then hangs. Doing actually useful stuff
+is something I'm still working on.

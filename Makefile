@@ -1,14 +1,17 @@
+SRCDIR := src
 OUTDIR := build
 
-BIN := $(OUTDIR)/kernel-1.0
+ENT := $(SRCDIR)/boot_sect.asm
+SRC := $(wildcard $(SRCDIR)/*.asm)
+BIN := $(OUTDIR)/kernel-2.0
 
 all: $(BIN)
 
 $(OUTDIR):
 	mkdir $(OUTDIR)
 
-$(BIN): $(OUTDIR)
-	cp src/kernel $(BIN)
+$(BIN): $(OUTDIR) $(SRC)
+	nasm -f bin -i $(SRCDIR) -o $(BIN) $(ENT)
 
 clean:
 	rm -fr $(OUTDIR)
