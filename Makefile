@@ -13,4 +13,4 @@ $(BIN): $(OUTDIR)
 clean:
 	rm -fr $(OUTDIR)
 
-.PHONY: clean
+.PHONY: all clean
